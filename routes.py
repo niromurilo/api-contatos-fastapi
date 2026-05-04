@@ -37,6 +37,8 @@ def deletar_contato(id: int):
 
     salvar_contatos(novos)
 
+    if len(contatos) == len(novos):
+        return {"erro": "Contato não encontrado"}
     return {"status": "sucesso", "mensagem": "Contato removido"}
 
 @router.put("/contatos/{id}")

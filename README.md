@@ -28,12 +28,24 @@ api-contatos/
 ├── database.py
 ├── contatos.json
 
+## 📥 Exemplo de requisição
+
+POST /contatos
+
+{
+  "nome": "Murilo",
+  "email": "murilo@email.com"
+}
+
 ## ▶️ Como executar o projeto
 
 pip install -r requirements.txt  
 uvicorn main:app --reload
 Acesse:
 http://127.0.0.1:8000/docs
+
+## 📷 Demonstração
+
 
 
 ## 📈 Melhorias futuras
