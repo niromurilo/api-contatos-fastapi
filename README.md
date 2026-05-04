@@ -1,62 +1,91 @@
 # API de Contatos 📇
 
-Projeto desenvolvido com foco em back-end utilizando FastAPI, com implementação de uma API REST para gerenciamento de contatos.
+API REST desenvolvida com FastAPI para gerenciamento de contatos.
 
-A aplicação permite realizar operações completas de CRUD (criação, leitura, atualização e remoção), além de aplicar validação de dados, organização em camadas e boas práticas de estruturação de código.
+O projeto permite realizar operações completas de CRUD (criar, listar, atualizar e remover contatos), além de aplicar validação de dados e organização em estrutura modular.
 
-Este projeto foi desenvolvido como parte da minha evolução na área de desenvolvimento back-end, com objetivo de consolidar conceitos fundamentais e boas práticas utilizadas no mercado.
+---
 
 ## 🚀 Tecnologias utilizadas
-- Python
-- FastAPI
-- Pydantic
-- JSON
+
+* Python
+* FastAPI
+* Pydantic
+
+---
 
 ## 📌 Funcionalidades
-- Criar contato (POST)
-- Listar contatos (GET)
-- Atualizar contato (PUT)
-- Remover contato (DELETE)
-- Validação de email
 
-## 📂 Estrutura do projeto
+* Cadastro de contatos
+* Listagem de contatos
+* Atualização de dados
+* Remoção de contatos
+* Validação de email
 
-api-contatos/
-├── main.py
-├── routes.py
-├── models.py
-├── database.py
-├── contatos.json
+---
+
+## 🔗 Endpoints
+
+| Método | Rota           | Descrição               |
+| ------ | -------------- | ----------------------- |
+| GET    | /contatos      | Lista todos os contatos |
+| POST   | /contatos      | Cria um novo contato    |
+| PUT    | /contatos/{id} | Atualiza um contato     |
+| DELETE | /contatos/{id} | Remove um contato       |
+
+---
 
 ## 📥 Exemplo de requisição
 
+### Criar contato
+
 POST /contatos
 
+```json
 {
   "nome": "Murilo",
   "email": "murilo@email.com"
 }
+```
 
-## ▶️ Como executar o projeto
+---
 
-pip install -r requirements.txt  
-uvicorn main:app --reload
-Acesse:
-http://127.0.0.1:8000/docs
+## 📤 Exemplo de resposta
+
+```json
+{
+  "status": "sucesso",
+  "mensagem": "Contato adicionado",
+  "contato": {
+    "id": 1,
+    "nome": "Murilo",
+    "email": "murilo@email.com"
+  }
+}
+```
+
+---
 
 ## 📷 Demonstração
 
 ![API funcionando](assets/api.png)
 
+---
 
+## ▶️ Como executar o projeto
+
+```bash
+pip install -r requirements.txt
+uvicorn main:app --reload
+```
+
+Acesse a documentação interativa em:
+http://127.0.0.1:8000/docs
+
+---
 
 ## 📈 Melhorias futuras
-- Integração com banco de dados (SQLite)
-- Autenticação de usuários
-- Deploy da aplicação
 
-
-## 📷 Testando a API
-
-Acesse a documentação interativa:
-http://127.0.0.1:8000/docs
+* Integração com banco de dados (SQLite)
+* Autenticação de usuários
+* Deploy da aplicação
