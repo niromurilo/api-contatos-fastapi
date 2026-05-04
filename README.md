@@ -40,3 +40,9 @@ http://127.0.0.1:8000/docs
 - Integração com banco de dados (SQLite)
 - Autenticação de usuários
 - Deploy da aplicação
+
+
+## 📷 Testando a API
+
+Acesse a documentação interativa:
+http://127.0.0.1:8000/docs
